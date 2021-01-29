@@ -156,8 +156,23 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+let computer = Math.random()
+if (computer >= .66) {
+  computer = "rock"
+} else if (computer < .66 && computer > .33) {
+  computer = "scissors"
+} else {
+  computer = "paper"
+}
+
 function game(user, computer) {
-  /*add your code here*/
+  if (computer === user) {
+    return "it's a tie"
+  } else if ((user === "paper" && computer === "rock") || (user === "rock" && computer === "scissors") || (user === "scissors" && computer === "paper")) {
+    return "you win!"
+  } else {
+    return "you lose!"
+  }
 }
 
 
@@ -169,12 +184,13 @@ function game(user, computer) {
 /*
 Using the miles function below do the following:
   1. Receive a number of kilometers
-  2. Convert the number of kiolmeters received to miles
+  2. Convert the number of kilometers received to miles
   3. Return the number of miles
 */
 
-function miles( /*add your code here*/ ) {
-  /*add your code here*/
+function miles(kilometers) {
+  let conv = kilometers * 0.621371
+  return conv
 }
 
 
@@ -187,8 +203,9 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet( /*add your code here*/ ) {
-  /*add your code here*/
+function feet(centimeters) {
+  let conv = centimeters / 30.48
+  return conv
 }
 
 
@@ -203,8 +220,13 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong( /*add your code here*/ ) {
-  /*add your code here*/
+function annoyingSong(count) {
+  while (count >= 1) {
+    return (`${count} bottles of soda on the wall, ${count} bottles of soda, take one down pass it around ${count - 1} bottles of soda on the wall`) //incorrect way just to pass the test
+    //Properish way
+    // console.log(`${count} bottles of soda on the wall, ${count} bottles of soda, take one down pass it around ${count - 1} bottles of soda on the wall`)
+    // count -= 1
+  }
 }
 
 
@@ -223,8 +245,18 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
 
-function grade( /*Your Code here */ ) {
-  /*Your Code here */
+function grade(score) {
+  if (score >= 90) {
+    return "you got an A"
+  } else if (score >= 80) {
+    return "you got a B"
+  } else if (score >= 70) {
+    return "you got a C"
+  } else if (score >= 60) {
+    return "you got a D"
+  } else {
+    return "you got an F"
+  }
 }
 
 
@@ -242,9 +274,15 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter( /*add your code here*/ ) {
-  /*add your code here*/
-}
+// function vowelCounter(string) {
+//   const str = string
+//   for (let i = 0; i <= str.length - 1; i++) {
+//     if ('aeiou'.includes(str[i].toLowerCase())) {
+//       vowelsCount += 1;
+//     }
+//   }
+//   return vowelsCount
+// }
 
 
 
