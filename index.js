@@ -274,15 +274,15 @@ Using the vowelCounter function below do the following:
 */
 
 
-// function vowelCounter(string) {
-//   const str = string
-//   for (let i = 0; i <= str.length - 1; i++) {
-//     if ('aeiou'.includes(str[i].toLowerCase())) {
-//       vowelsCount += 1;
-//     }
-//   }
-//   return vowelsCount
-// }
+function vowelCounter(string) {
+  let vowelsCount = 0
+  for (let i = 0; i <= string.length - 1; i++) {
+    if ('aeiou'.includes(string[i].toLowerCase())) {
+      vowelsCount += 1;
+    }
+  }
+  return vowelsCount
+}
 
 
 
